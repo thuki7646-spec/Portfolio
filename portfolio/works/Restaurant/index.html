@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Наш ресторан — Дом лучшей еды</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=PT+Serif:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <!-- Шапка -->
+    <header id="h">
+      <div class="w">
+        <div class="logo"></div>
+        <nav>
+          <a href="#top" data-i="nav1">Главная</a>
+          <a href="#menu" data-i="nav2">Меню</a>
+          <a href="#about" data-i="nav3">О нас</a>
+          <a href="#book" data-i="nav4">Бронь</a>
+        </nav>
+        <div class="lang">
+          <button data-l="ru" class="on">RU</button>
+          <button data-l="kk">KZ</button>
+          <button data-l="en">EN</button>
+        </div>
+        <div class="tel">
+          <b>+999-888-76-54</b>
+          <small data-i="tel">Свяжитесь с нами для бронирования</small>
+        </div>
+        <a href="#book" class="btn" data-i="book">Заказ столика</a>
+        <button class="bt" aria-label="Меню">☰</button>
+      </div>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero" id="top">
+      <div class="w">
+        <h1 data-i="hero_h">Добро пожаловать в<b>Наш ресторан</b></h1>
+        <p data-i="hero_p">— Дом лучшей еды —</p>
+        <a href="#menu" class="btn" data-i="hero_btn">View menu</a>
+      </div>
+    </section>
+
+    <!-- Карточки преимуществ -->
+    <div class="w feat">
+      <div>
+        <div class="ico"></div>
+        <h3 data-i="f1h">Магическая <span>Атмосфера</span></h3>
+        <p data-i="f1p">В нашем заведении царит магическая атмосфера наполненная вкусными ароматами</p>
+      </div>
+      <div>
+        <div class="ico"></div>
+        <h3 data-i="f2h">Лучшее качество <span>Еды</span></h3>
+        <p data-i="f2p">Качество нашей Еды - отменное!</p>
+      </div>
+      <div>
+        <div class="ico"></div>
+        <h3 data-i="f3h">Недорогая <span>Еда</span></h3>
+        <p data-i="f3p">Стоимость нашей Еды зависит только от ее количества. Качество всегда на высоте.</p>
+      </div>
+    </div>
+
+    <!-- Наша история -->
+    <section class="story" id="about">
+      <div class="w">
+        <div>
+          <h2 data-i="st_h">Наша <span>История</span></h2>
+          <p data-i="st_p">Как и у любого другого самобытного места, у нас есть своя, особая история. Идея ресторана пришла основателям неожиданно. Во время прогулки по лесу создатель нашего ресторана заглох в сотнях километров от ближайшего населённого пункта. Вдали от цивилизации и связи им пришлось накормить себя, добывать и готовить себе еду.</p>
+          <div class="nums">
+            <div>
+              <b>93</b>
+              <span data-i="n1">Напитки</span>
+            </div>
+            <div>
+              <b>206</b>
+              <span data-i="n2">Еда</span>
+            </div>
+            <div>
+              <b>71</b>
+              <span data-i="n3">Закуски</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <img class="a" src="images/story-room.jpg" alt>
+          <img class="b" src="images/story-cake.jpg" alt>
+          <img class="c" src="images/story-spices.jpg" alt>
+        </div>
+      </div>
+    </section>
+
+    <!-- Баннер с акцией -->
+    <section class="ban">
+      <div class="w">
+        <div>
+          <h3 data-i="ban_h">Отпразднуйте в одном из самых лучших ресторанов.</h3>
+          <p data-i="ban_p">Только в этом месяце бизнес-ланч от 250 ₽</p>
+        </div>
+        <a href="#book" class="btn" data-i="book">Заказ столика</a>
+      </div>
+    </section>
+
+    <!-- Наши блюда -->
+    <section class="dishes">
+      <div class="w">
+        <h2 data-i="di_h">Наши <span>Блюда</span></h2>
+        <div class="dg">
+          <img src="images/dish-pizza.jpg" alt="Пицца">
+          <div class="dl">
+            <div class="row">
+              <img src="images/dish-burger-mini.jpg" alt>
+              <div class="nm">
+                <span data-i="dish">Гамбургер мини</span>
+                <i></i>
+                <b>220 ₽</b>
+              </div>
+            </div>
+            <div class="row">
+              <img src="images/dish-burger-mini.jpg" alt>
+              <div class="nm">
+                <span data-i="dish">Гамбургер мини</span>
+                <i></i>
+                <b>220 ₽</b>
+              </div>
+            </div>
+            <div class="row">
+              <img src="images/dish-burger-mini.jpg" alt>
+              <div class="nm">
+                <span data-i="dish">Гамбургер мини</span>
+                <i></i>
+                <b>220 ₽</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Наше меню -->
+    <section class="menu" id="menu">
+      <span class="arr l"></span>
+      <span class="arr r"></span>
+      <div class="w">
+        <h2 data-i="me_h">Наше меню</h2>
+        <div class="cards">
+          <div class="card">
+            <span class="tag" data-i="tag">Recommended</span>
+            <div class="ph">
+              <img src="images/burger-maxi.jpg" alt>
+              <em>420</em>
+            </div>
+            <h4 data-i="cd_h">Гамбургер макси</h4>
+            <p data-i="cd_p">Максимально толстый слой мяса</p>
+            <a href="#" class="btn" data-i="order">Заказать</a>
+          </div>
+          <div class="card">
+            <div class="ph">
+              <img src="images/burger-maxi.jpg" alt>
+              <em>420</em>
+            </div>
+            <h4 data-i="cd_h">Гамбургер макси</h4>
+            <p data-i="cd_p">Максимально толстый слой мяса</p>
+            <a href="#" class="btn" data-i="order">Заказать</a>
+          </div>
+          <div class="card">
+            <div class="ph">
+              <img src="images/burger-maxi.jpg" alt>
+              <em>420</em>
+            </div>
+            <h4 data-i="cd_h">Гамбургер макси</h4>
+            <p data-i="cd_p">Максимально толстый слой мяса</p>
+            <a href="#" class="btn" data-i="order">Заказать</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Отзыв -->
+    <section class="rev">
+      <div class="w">
+        <p data-i="rv_p">Я надолго запомню мой День рождения, проведённый в этом ресторане! Кусочек родной Армении!!! Отдельное спасибо за комплимент в виде фруктовой тарелки. Будем рекомендовать этот ресторан своим друзьям и родственникам также за рубежом, путешествующим в Санкт-Петербурге!!!</p>
+        <img src="images/avatar.jpg" alt>
+        <b data-i="rv_b">Посетитель</b>
+        <small>Николай</small>
+        <div class="dots">
+          <i></i>
+          <i></i>
+          <i class="on"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Галерея блюд -->
+    <section class="gal">
+      <div class="w">
+        <h2 data-i="ga_h">Галерея <span>Блюд</span></h2>
+        <div class="gg">
+          <div class="x2">
+            <img src="images/gal-1.jpg" alt>
+          </div>
+          <div>
+            <img src="images/gal-2.jpg" alt>
+          </div>
+          <div>
+            <img src="images/gal-3.jpg" alt>
+          </div>
+          <div>
+            <img src="images/gal-4.jpg" alt>
+          </div>
+          <div>
+            <img src="images/gal-5.jpg" alt>
+          </div>
+          <div class="x2">
+            <img src="images/gal-6.jpg" alt>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Наши повара -->
+    <section class="chefs">
+      <div class="w">
+        <h2 data-i="ch_h">Наши <span>Повара</span></h2>
+        <div class="cg">
+          <img src="images/chef-1.jpg" alt="Повар">
+          <img src="images/chef-2.jpg" alt="Повар">
+          <img src="images/chef-3.jpg" alt="Повар">
+        </div>
+      </div>
+    </section>
+
+    <!-- Подвал и бронирование -->
+    <footer id="book">
+      <div class="w">
+        <h3 data-i="ft_h">Забронируйте столик</h3>
+        <p data-i="ft_p">Звоните: +999-888-76-54</p>
+        <a href="#" class="btn" data-i="book">Заказ столика</a>
+        <small data-i="ft_s">© Наш ресторан — Дом лучшей еды</small>
+      </div>
+    </footer>
+
+    <!-- Окно бронирования -->
+    <div class="md" id="md" role="dialog" aria-modal="true">
+      <div class="mc">
+        <button class="mx" id="mx" aria-label="Закрыть">×</button>
+        <div id="mf">
+          <h3 data-i="book">Заказ столика</h3>
+          <form id="bf">
+            <label>
+              <span data-i="m_n">Ваше имя</span>
+              <input name="n" required autocomplete="name">
+            </label>
+            <label>
+              <span data-i="m_p">Телефон</span>
+              <input name="p" type="tel" required autocomplete="tel" placeholder="+7">
+            </label>
+            <div class="r2">
+              <label>
+                <span data-i="m_d">Дата</span>
+                <input type="date" name="d" id="bd" required>
+              </label>
+              <label>
+                <span data-i="m_g">Гостей</span>
+                <select name="g">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
+              </label>
+            </div>
+            <button class="btn" type="submit" data-i="m_s">Отправить</button>
+          </form>
+          <p class="or">
+            <span data-i="m_or">Или позвоните нам:</span>
+            <a href="tel:+9998887654">+999-888-76-54</a>
+          </p>
+        </div>
+        <div class="ok" id="mo" hidden>
+          <div class="ck">✓</div>
+          <h3 data-i="m_ok">Спасибо!</h3>
+          <p data-i="m_okp">Мы получили вашу заявку и скоро свяжемся с вами.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Кнопка «наверх» -->
+    <button id="up" aria-label="Наверх">
+      <svg class="r" fill="none" height="54" viewbox="0 0 54 54" width="54"><circle class="tr" cx="27" cy="27" r="24" stroke-width="3"></circle><circle class="rg" cx="27" cy="27" r="24" stroke-dasharray="150.8" stroke-dashoffset="150.8" stroke-width="3"></circle></svg>
+      <svg class="ar" fill="none" height="20" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="20"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>
+    </button>
+
+    <script src="js/translations.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

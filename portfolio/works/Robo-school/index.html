@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ROBO SCHOOL</title>
+
+  <!-- Шрифт Jost -->
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Все стили сайта -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!--
+  Как устроен перевод (РУС / ҚАЗ / ENG):
+  - Русский текст написан прямо здесь, в разметке.
+  - data-i18n="ключ"             → текст элемента берётся из TRANSLATIONS[язык][ключ] (js/data.js)
+  - data-i18n-placeholder="ключ" → то же самое для placeholder у полей формы
+  Чтобы поменять текст на казахском или английском, правьте js/data.js.
+-->
+<body>
+
+  <!-- ==================== ШАПКА ==================== -->
+  <header class="site-header">
+    <a class="logo" href="#">ROBO.SCHOOL</a>
+
+    <!-- Меню: на телефоне открывается как полноэкранная панель -->
+    <nav class="main-nav" id="main-nav">
+      <a href="#about"    data-i18n="nav_about">О школе</a>
+      <a href="#trainers" data-i18n="nav_trainers">Тренеры</a>
+      <a href="#price"    data-i18n="nav_price">Стоимость</a>
+
+      <!-- Переключатель языков внутри мобильного меню -->
+      <div class="lang-switch lang-switch--mobile">
+        <button type="button" class="lang-btn" data-lang="ru">РУС</button>
+        <button type="button" class="lang-btn" data-lang="kk">ҚАЗ</button>
+        <button type="button" class="lang-btn" data-lang="en">ENG</button>
+      </div>
+    </nav>
+
+    <!-- Правая часть шапки на компьютере: языки + телефон -->
+    <div class="header-right">
+      <div class="lang-switch">
+        <button type="button" class="lang-btn" data-lang="ru">РУС</button>
+        <button type="button" class="lang-btn" data-lang="kk">ҚАЗ</button>
+        <button type="button" class="lang-btn" data-lang="en">ENG</button>
+      </div>
+      <a class="phone" href="tel:+78000001122">+7 800 000 11 22</a>
+    </div>
+
+    <!-- Кнопки «позвонить» и «меню» — только на телефоне -->
+    <div class="header-actions">
+      <a href="tel:+78000001122" aria-label="Позвонить">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff">
+          <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/>
+        </svg>
+      </a>
+      <button type="button" id="menu-toggle" aria-label="Меню">
+        <svg class="icon-burger" width="16" height="14" viewBox="0 0 16 14" fill="#fff">
+          <rect width="16" height="2" rx="1"/>
+          <rect y="6" width="16" height="2" rx="1"/>
+          <rect y="12" width="16" height="2" rx="1"/>
+        </svg>
+        <svg class="icon-close" width="18" height="18" viewBox="0 0 18 18" stroke="#fff" stroke-width="2" stroke-linecap="round">
+          <path d="M2 2l14 14M16 2L2 16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ==================== ПЕРВЫЙ ЭКРАН ==================== -->
+  <div class="hero">
+    <div class="hero__inner">
+      <div class="hero__text">
+        <h1>ROBO SCHOOL</h1>
+        <p data-i18n="hero_text">Курсы повышения квалификации по робототехнике для педагогов начальной школы</p>
+        <a class="btn" href="#apply" data-i18n="hero_btn">Записаться на курс</a>
+      </div>
+
+      <!-- Фото в белом кольце -->
+      <div class="hero__photo">
+        <span class="hero__ring"></span>
+        <img class="hero__img" alt="" src="img/hero.webp">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== О ШКОЛЕ ==================== -->
+  <section id="about">
+    <div class="container">
+      <p class="about__text" data-i18n="about_text"><b>Robo School</b> – учреждение для формирования кадрового педагогического резерва в сфере робототехники и программирования</p>
+
+      <div class="stats">
+        <div class="stat">
+          <b class="stat__num">10</b>
+          <span class="stat__label" data-i18n="stat_1">УМК по различным направлениям по робототехнике</span>
+        </div>
+        <div class="stat">
+          <b class="stat__num">20</b>
+          <span class="stat__label" data-i18n="stat_2">Школ, в которых запущена робототехника</span>
+        </div>
+        <div class="stat">
+          <b class="stat__num">100</b>
+          <span class="stat__label" data-i18n="stat_3">Педагогов прошедших курсы повышения квалификации</span>
+        </div>
+        <div class="stat">
+          <b class="stat__num">10 000</b>
+          <span class="stat__label" data-i18n="stat_4">Обученных детей на базе собственных центров</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== ЧТО ПОЛУЧИТЕ ПОСЛЕ КУРСА ==================== -->
+  <section class="section--gray">
+    <div class="container">
+      <h2 data-i18n="perks_title">Что вы получите после курса</h2>
+
+      <div class="perks">
+        <div class="perk">
+          <h3 class="perk__title" data-i18n="perk_certificate_title">Удостоверение</h3>
+          <p class="perk__text" data-i18n="perk_certificate_text">Дающее право преподавать робототехнику для детей 6-12 лет в образовательных учреждениях</p>
+        </div>
+
+        <div class="perk">
+          <h3 class="perk__title" data-i18n="perk_knowledge_title">Знания</h3>
+          <p class="perk__text" data-i18n="perk_knowledge_text">По основам разработки учебно-методических комплексов по робототехнике и программированию</p>
+        </div>
+
+        <div class="perk">
+          <h3 class="perk__title">
+            <span data-i18n="perk_practice_title">Практику</span>
+            <!-- Значок «i»: подсказка видна при наведении (компьютер) или по касанию (телефон) -->
+            <i class="info-icon" tabindex="0" aria-describedby="tooltip-practice">i<span class="tooltip" id="tooltip-practice" role="tooltip" data-i18n="perk_practice_tip">При наличии свободных мест</span></i>
+          </h3>
+          <p class="perk__text" data-i18n="perk_practice_text">Возможность пройти практику по преподаванию робототехники на базе R:ED LAB (в оффлайн или онлайн формате)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== ТРЕНЕРЫ ==================== -->
+  <section id="trainers">
+    <div class="container">
+      <h2 data-i18n="trainers_title">Профессиональные тренеры</h2>
+
+      <!--
+        Карточки тренеров (горизонтальная прокрутка).
+        data-photo   — фото для окна «Подробнее»
+        data-trainer — номер тренера в массиве TRAINERS (js/data.js)
+      -->
+      <div class="trainers__row" id="trainers-row">
+        <div class="trainer-card" data-photo="img/t2.jpg" data-trainer="0">
+          <img class="trainer-card__photo" alt="" src="img/t2.jpg">
+          <h3 class="trainer-card__name" data-i18n="name_0">Ирина Лайм</h3>
+          <small class="trainer-card__role" data-i18n="role_robotics">преподаватель по робототехнике</small>
+          <a class="trainer-card__more" data-i18n="btn_more">Подробнее</a>
+        </div>
+
+        <div class="trainer-card" data-photo="img/t3.jpg" data-trainer="1">
+          <img class="trainer-card__photo" alt="" src="img/t3.jpg">
+          <h3 class="trainer-card__name" data-i18n="name_1">Марина Орлова</h3>
+          <small class="trainer-card__role" data-i18n="role_robotics">преподаватель по робототехнике</small>
+          <a class="trainer-card__more" data-i18n="btn_more">Подробнее</a>
+        </div>
+
+        <div class="trainer-card" data-photo="img/t4.jpg" data-trainer="2">
+          <img class="trainer-card__photo" alt="" src="img/t4.jpg">
+          <h3 class="trainer-card__name" data-i18n="name_2">Максим Петров</h3>
+          <small class="trainer-card__role" data-i18n="role_programming">преподаватель по программированию</small>
+          <a class="trainer-card__more" data-i18n="btn_more">Подробнее</a>
+        </div>
+
+        <div class="trainer-card" data-photo="img/t1.jpg" data-trainer="3">
+          <img class="trainer-card__photo" alt="" src="img/t1.jpg">
+          <h3 class="trainer-card__name" data-i18n="name_3">Константин Назаров</h3>
+          <small class="trainer-card__role" data-i18n="role_robotics">преподаватель по робототехнике</small>
+          <a class="trainer-card__more" data-i18n="btn_more">Подробнее</a>
+        </div>
+
+        <div class="trainer-card" data-photo="img/t5.jpg" data-trainer="4">
+          <img class="trainer-card__photo" alt="" src="img/t5.jpg">
+          <h3 class="trainer-card__name" data-i18n="name_4">Лиза Весенняя</h3>
+          <small class="trainer-card__role" data-i18n="role_programming">преподаватель по программированию</small>
+          <a class="trainer-card__more" data-i18n="btn_more">Подробнее</a>
+        </div>
+      </div>
+
+      <!-- Полоса прогресса прокрутки и стрелки (стрелки скрыты на телефоне) -->
+      <div class="trainers__controls">
+        <div class="progress"><span class="progress__fill" id="trainers-progress"></span></div>
+        <div class="arrows">
+          <button type="button" class="arrow-btn" id="trainers-prev">‹</button>
+          <button type="button" class="arrow-btn" id="trainers-next">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== ТАРИФЫ ==================== -->
+  <section id="price">
+    <div class="container">
+      <h2 data-i18n="price_title">Выберите нужный пакет</h2>
+
+      <div class="pricing">
+        <div class="plan plan--pro">
+          <h3>– PRO –</h3>
+          <strong>20.000 ₽</strong>
+          <p data-i18n="plan_pro_text">УМК по робототехнике<br>и программированию</p>
+          <a class="btn" href="#apply" data-i18n="btn_request">Оставить заявку</a>
+        </div>
+
+        <div class="plan">
+          <h3>– ROBO –</h3>
+          <strong>15.000 ₽</strong>
+          <p data-i18n="plan_robo_text">УМК по робототехнике</p>
+          <a class="btn" href="#apply" data-i18n="btn_request">Оставить заявку</a>
+        </div>
+
+        <div class="plan">
+          <h3>– PROG –</h3>
+          <strong>10.000 ₽</strong>
+          <p data-i18n="plan_prog_text">УМК по программированию</p>
+          <a class="btn" href="#apply" data-i18n="btn_request">Оставить заявку</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== ЗАЯВКА СО СКИДКОЙ ==================== -->
+  <section class="promo" id="apply">
+    <div class="container">
+      <div class="promo__text">
+        <h2 data-i18n="promo_title">Запишитесь на курс<br>со скидкой 10%</h2>
+        <p data-i18n="promo_note">Акция действительна до 10 марта 2022 года</p>
+      </div>
+
+      <form class="apply-form" id="apply-form">
+        <!-- Сюда JS подставляет название выбранного пакета -->
+        <div class="package-badge" id="package-badge" hidden></div>
+
+        <input id="field-name" data-i18n-placeholder="field_name" placeholder="Имя" required>
+        <input type="tel" data-i18n-placeholder="field_phone" placeholder="Телефон" required minlength="6">
+        <input type="email" data-i18n-placeholder="field_email" placeholder="E-mail" required>
+        <button data-i18n="btn_apply">Оформить заявку</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- ==================== ПОДВАЛ ==================== -->
+  <footer class="site-footer">
+    <div>
+      <div class="logo">ROBO.SCHOOL</div>
+      <small>© ROBO.SCHOOL</small>
+    </div>
+    <a class="phone" href="tel:+78000001122">+7 800 000 11 22</a>
+  </footer>
+
+
+  <!-- Кнопка «Наверх» (появляется после прокрутки вниз) -->
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Наверх">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+
+  <!-- ==================== ОКНО «ПОДРОБНЕЕ» О ТРЕНЕРЕ ==================== -->
+  <!-- Содержимое вкладок (pane-*) заполняет js/main.js -->
+  <dialog class="modal" id="trainer-modal">
+    <div class="modal__head">
+      <img class="modal__photo" id="modal-photo" alt="">
+
+      <div>
+        <h3 class="modal__name" id="modal-name"></h3>
+        <small class="modal__role" id="modal-role"></small>
+        <div class="modal__social">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener">f</a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="1.6">
+              <rect x="1" y="1" width="14" height="14" rx="4"/>
+              <circle cx="8" cy="8" r="3.2"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- «Закрыть» на компьютере, крестик на телефоне -->
+      <button type="button" class="modal__close" id="modal-close">
+        <span class="modal__close-text" data-i18n="btn_close">Закрыть</span>
+        <svg class="modal__close-icon" width="22" height="22" viewBox="0 0 18 18" stroke="#141024" stroke-width="2" stroke-linecap="round">
+          <path d="M2 2l14 14M16 2L2 16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Вкладки (компьютер) -->
+    <div class="tabs">
+      <b class="tabs__tab is-active" data-tab="0" data-i18n="tab_education">Образование</b>
+      <b class="tabs__tab"           data-tab="1" data-i18n="tab_experience">Опыт работы</b>
+      <b class="tabs__tab"           data-tab="2" data-i18n="tab_awards">Награды</b>
+    </div>
+
+    <!-- Содержимое. На телефоне вместо вкладок — аккордеон (кнопки .accordion-btn) -->
+    <div class="modal__body" id="modal-body">
+      <button type="button" class="accordion-btn" data-tab="0" data-i18n="tab_education_acc">Образование ▾</button>
+      <div class="pane is-active" data-pane="0" id="pane-education"></div>
+
+      <button type="button" class="accordion-btn" data-tab="1" data-i18n="tab_experience_acc">Опыт работы ▾</button>
+      <div class="pane" data-pane="1" id="pane-experience"></div>
+
+      <button type="button" class="accordion-btn" data-tab="2" data-i18n="tab_awards_acc">Награды ▾</button>
+      <div class="pane" data-pane="2" id="pane-awards"></div>
+    </div>
+  </dialog>
+
+
+  <!-- Сначала данные и переводы, потом логика -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

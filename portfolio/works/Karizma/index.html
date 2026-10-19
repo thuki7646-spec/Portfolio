@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#15161a">
+<meta property="og:title" content="KARIZMA — караоке-залы на Лубянке">
+<meta property="og:description" content="Караоке-залы до 10 человек. Свои еда и алкоголь без пробкового сбора, без депозита, круглосуточно.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/hall1.jpg">
+<title>KARIZMA — караоке-залы на Лубянке, до 10 человек</title>
+<meta name="description" content="Аренда караоке-зала до 10 человек. Можно приносить свою еду и алкоголь, без пробкового сбора и депозита. Круглосуточно, м. Лубянка.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="top">
+  <a class="logo" href="#top" aria-label="KARIZMA"><img src="img/logo.png" alt="KARIZMA"></a>
+
+  <div class="header__contacts">
+    <a class="pill" href="tel:+380979709090">
+      <span class="pill__icon"><svg viewBox="0 0 24 24"><path d="M7 2h10a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm1 3v12h8V5H8zm4 14.2a.9.9 0 1 0 0 1.8.9.9 0 0 0 0-1.8z"/></svg></span>
+      <span>+38 (097) 970-90-90</span>
+    </a>
+    <span class="pill pill--metro">
+      <span class="pill__icon"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.500a2.5 2.5 0 0 1 0 5z"/></svg></span>
+      <span data-i18n="metro">м. Лубянка</span>
+    </span>
+  </div>
+
+  <div class="header__actions">
+    <div class="lang" role="group" data-i18n-aria="lang.aria" aria-label="Язык сайта">
+      <button type="button" data-setlang="ru">RU</button><button type="button" data-setlang="kk">KZ</button><button type="button" data-setlang="en">EN</button>
+    </div>
+    <a class="btn btn--outline" href="#halls" data-i18n="nav.halls">Наши залы</a>
+    <a class="btn btn--white" href="#booking" data-book data-i18n="nav.book">Забронировать</a>
+  </div>
+
+  <a class="pill-m" href="#halls" aria-label="м. Лубянка" data-i18n-aria="metro"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></a>
+
+  <button class="burger" id="burger" aria-label="Открыть меню" data-i18n-aria="nav.menu.open" aria-expanded="false" aria-controls="menu">
+    <span></span><span></span>
+  </button>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="menu-overlay" id="menuOverlay" hidden></div>
+<div class="menu" id="menu" hidden role="dialog" aria-modal="true" aria-label="Меню" data-i18n-aria="nav.menu">
+  <div class="menu__top">
+    <img class="menu__logo" src="img/logo.png" alt="KARIZMA">
+    <button class="menu__close" id="menuClose" aria-label="Закрыть меню" data-i18n-aria="nav.menu.close">
+      <svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></svg>
+    </button>
+  </div>
+  <div class="menu__row">
+    <span class="menu__circle"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5z" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></span>
+    <span class="menu__metro" data-i18n="metro">м. Лубянка</span>
+  </div>
+  <a class="menu__row" href="tel:+380979709090">
+    <span class="menu__circle"><svg viewBox="0 0 24 24"><rect x="7" y="2.500" width="10" height="19" rx="1.500" fill="none" stroke="currentColor" stroke-width="1.200"/><path d="M4 8v8M20 8v8" stroke="currentColor" stroke-width="1.200" fill="none"/></svg></span>
+    <span class="menu__phone">+38 (097) 970-90-90</span>
+  </a>
+  <a class="btn btn--outline btn--block" href="#halls" data-close-menu data-i18n="nav.halls">Наши залы</a>
+  <a class="btn btn--white btn--block" href="#booking" data-close-menu data-book data-i18n="nav.book">Забронировать</a>
+  <div class="lang" role="group" data-i18n-aria="lang.aria" aria-label="Язык сайта">
+      <button type="button" data-setlang="ru">RU</button><button type="button" data-setlang="kk">KZ</button><button type="button" data-setlang="en">EN</button>
+    </div>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__glow"></div>
+  <img class="hero__dancer" src="img/dancer.png" alt="Девушка с микрофоном танцует в караоке" data-i18n-alt="hero.dancer.alt" width="700" height="1247">
+
+  <div class="hero__content">
+    <p class="hero__kicker" data-i18n="hero.kicker">Арендуй караоке-зал <br class="br-m">до 10 человек</p>
+    <h1 class="hero__title"><span data-i18n="hero.title">Возьми <br class="br-m">алкоголь <br>и еду с собой</span> <span class="tag" data-i18n="metro">м. Лубянка</span></h1>
+
+    <ul class="hero__checks">
+      <li><i class="check"></i><span data-i18n="hero.check1">Если хочешь попеть <br class="br-d">и оторваться</span></li>
+      <li><i class="check"></i><span data-i18n="hero.check2">Отдохнуть <br class="br-d">после работы</span></li>
+      <li><i class="check"></i><span data-i18n="hero.check3">Хорошо <br class="br-d">провести время</span></li>
+    </ul>
+
+    <a class="btn btn--grad" href="https://t.me/fh_harizma_bot" target="_blank" rel="noopener" data-book data-i18n="hero.cta">Забронировать онлайн</a>
+  </div>
+
+  <div class="hero__badge" aria-label="Работаем круглосуточно" data-i18n-aria="hero.badge.aria">
+    <span class="hero__badge-24">24</span>
+    <span class="hero__badge-small" data-i18n="hero.badge.small">Можно шуметь</span>
+    <strong data-i18n="hero.badge.main">Круглосуточно</strong>
+  </div>
+
+  <span class="hero__side hero__side--left" data-i18n="hero.scroll">Листать вниз</span>
+  <a class="hero__side hero__side--right" href="https://t.me/fh_harizma_bot" target="_blank" rel="noopener" data-i18n="hero.contact">Связаться с нами</a>
+  <a class="hero__tg" href="https://t.me/fh_harizma_bot" target="_blank" rel="noopener" aria-label="Написать в Telegram" data-i18n-aria="hero.tg.aria">
+    <svg viewBox="0 0 24 24"><path d="M21 3 3 10.500l5.500 2L10 19l3-3.500 4.500 3.500L21 3zM8.500 12.500l9-6-6.500 7" fill="none" stroke="#fff" stroke-width="1.500" stroke-linejoin="round"/></svg>
+  </a>
+</section>
+
+<!-- ============ FEATURE STRIP ============ -->
+<section class="strip">
+  <div class="strip__item"><img loading="lazy" decoding="async" src="img/icons/i-mic.png" alt=""><i class="dash"></i><span data-i18n="strip.1">Профессиональное <br>караоке AST-50</span></div>
+  <div class="strip__item"><img loading="lazy" decoding="async" src="img/icons/i-bottle.png" alt=""><i class="dash"></i><span data-i18n="strip.2">Без пробкового <br>сбора</span></div>
+  <div class="strip__item"><img loading="lazy" decoding="async" src="img/icons/i-hand.png" alt=""><i class="dash"></i><span data-i18n="strip.3">Без депозита</span></div>
+  <div class="strip__item"><img loading="lazy" decoding="async" src="img/icons/i-confetti.png" alt=""><i class="dash"></i><span data-i18n="strip.4">Скидка <br>в День Рождения</span></div>
+</section>
+
+<!-- ============ HALLS ============ -->
+<section class="halls" id="halls">
+  <div class="halls__info">
+    <h2 class="title" data-i18n="halls.title">Наши залы</h2>
+    <p class="subtitle" data-i18n="halls.sub">Ознакомьтесь <br>с атмосферой праздника</p>
+
+    <div class="halls__tabs" id="hallTabs" role="tablist"></div>
+
+    <ul class="halls__specs">
+      <li><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.600"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.600"/></svg><span id="hallNum">№ 1</span></li>
+      <li><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="1.600"/></svg><span id="hallArea">40 м²</span></li>
+      <li><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.600"/><path d="M3 20c0-4 3-6 6-6s6 2 6 6M16 6.500a3 3 0 0 1 0 5.500M18 14c2 .8 3 2.700 3 6" fill="none" stroke="currentColor" stroke-width="1.600"/></svg><span id="hallCap">до 20-ти человек</span></li>
+    </ul>
+
+    <div class="counter">
+      <button class="round" id="hallPrev" aria-label="Предыдущее фото" data-i18n-aria="halls.prev"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <span class="counter__num"><b id="hallIdx">1</b> <span data-i18n="of">из</span> <span id="hallTotal">17</span></span>
+      <button class="round round--active" id="hallNext" aria-label="Следующее фото" data-i18n-aria="halls.next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+
+    <a class="btn btn--grad" href="https://t.me/fh_harizma_bot" target="_blank" rel="noopener" data-book data-i18n="halls.cta">Забронировать</a>
+  </div>
+
+  <div class="halls__gallery">
+    <div class="halls__main"><img id="hallMain" src="img/hall1.jpg" alt="Зал караоке"></div>
+    <div class="halls__thumbs" id="hallThumbs"></div>
+  </div>
+</section>
+
+<!-- ============ ADVANTAGES ============ -->
+<section class="adv">
+  <h2 class="title" data-i18n="adv.title">Наши преимущества</h2>
+  <p class="subtitle" data-i18n="adv.sub">Почему гости выбирают нас</p>
+
+  <div class="adv__layout">
+    <div class="adv__grid">
+      <article class="card">
+        <img loading="lazy" decoding="async" src="img/icons/a-shirt.png" alt="">
+        <h3 data-i18n="adv.1.t">Никакого дресс-контроля</h3>
+      </article>
+      <article class="card">
+        <img loading="lazy" decoding="async" src="img/icons/a-vinyl.png" alt="">
+        <h3 data-i18n="adv.2.t">~ 40.000 песен в сет листе</h3>
+        <ul class="card__list">
+          <li data-i18n="adv.2.l1">Более 50,000 студийных фонограмм</li>
+          <li data-i18n="adv.2.l2">Ежемесячное обновление репертуара</li>
+        </ul>
+      </article>
+      <article class="card">
+        <img loading="lazy" decoding="async" src="img/icons/a-dance.png" alt="">
+        <h3 data-i18n="adv.3.t">Индивидуальные залы</h3>
+        <ul class="card__list"><li data-i18n="adv.3.l1">Только Ваша компания</li></ul>
+      </article>
+      <article class="card">
+        <img loading="lazy" decoding="async" src="img/icons/a-money.png" alt="">
+        <h3 data-i18n="adv.4.t">Без депозита</h3>
+        <ul class="card__list">
+          <li><b class="accent" data-i18n="adv.4.l1">Мы не берем депозит</b></li>
+          <li data-i18n="adv.4.l2">Оплата происходит за человека в час</li>
+        </ul>
+      </article>
+      <article class="card">
+        <img loading="lazy" decoding="async" src="img/icons/a-target.png" alt="">
+        <h3 data-i18n="adv.5.t">В самом центре Москвы</h3>
+        <ul class="card__list"><li data-i18n="metro">м. Лубянка</li></ul>
+      </article>
+      <article class="card">
+        <img loading="lazy" decoding="async" src="img/icons/a-bottle.png" alt="">
+        <h3 data-i18n="adv.6.t">Нет пробкового сбора</h3>
+        <ul class="card__list"><li data-i18n="adv.6.l1">Можно приносить с собой еду, напитки и алкоголь <b class="accent">без пробкового сбора</b></li></ul>
+      </article>
+    </div>
+
+    <div class="adv__mic">
+      <img loading="lazy" decoding="async" src="img/mic-bg.png" alt="Студийный микрофон на стойке" data-i18n-alt="adv.mic.alt">
+      <a class="btn btn--grad" href="https://t.me/fh_harizma_bot" target="_blank" rel="noopener" data-book data-i18n="cta.room">Забронировать зал</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW TO BOOK ============ -->
+<section class="steps" id="booking">
+  <div class="steps__head">
+    <div>
+      <h2 class="title" data-i18n="steps.title">Как забронировать зал?</h2>
+      <p class="subtitle" data-i18n="steps.sub">Бронирование по шагам в чат-боте</p>
+    </div>
+    <div class="counter counter--right">
+      <button class="round" id="stepPrev" aria-label="Назад" data-i18n-aria="steps.prev"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <span class="counter__num"><b id="stepIdx">1</b> <span data-i18n="of">из</span> <span id="stepTotal">9</span></span>
+      <button class="round round--active" id="stepNext" aria-label="Вперёд" data-i18n-aria="steps.next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+  <div class="steps__track" id="stepsTrack"></div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq">
+  <h2 class="title" data-i18n="faq.title">Вопросы и ответы</h2>
+  <p class="subtitle" data-i18n="faq.sub">Мы подготовили ответы на часто задаваемые вопросы</p>
+
+  <div class="faq__layout">
+    <div class="faq__list" id="faq">
+      <div class="faq__item open">
+        <button class="faq__q" aria-expanded="true"><span data-i18n="faq.q1"></span><i></i></button>
+        <div class="faq__a"><div data-i18n="faq.a1"></div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false"><span data-i18n="faq.q2"></span><i></i></button>
+        <div class="faq__a"><div data-i18n="faq.a2"></div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false"><span data-i18n="faq.q3"></span><i></i></button>
+        <div class="faq__a"><div data-i18n="faq.a3"></div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false"><span data-i18n="faq.q4"></span><i></i></button>
+        <div class="faq__a"><div data-i18n="faq.a4"></div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false"><span data-i18n="faq.q5"></span><i></i></button>
+        <div class="faq__a"><div data-i18n="faq.a5"></div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false"><span data-i18n="faq.q6"></span><i></i></button>
+        <div class="faq__a"><div data-i18n="faq.a6"></div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false"><span data-i18n="faq.q7"></span><i></i></button>
+        <div class="faq__a"><div data-i18n="faq.a7"></div></div>
+      </div>
+    </div>
+
+    <aside class="faq__note">
+      <p data-i18n="faq.note"></p>
+      <img loading="lazy" decoding="async" src="img/slippers-bg.png" alt="" data-i18n-alt="faq.slippers.alt">
+      <a class="btn btn--grad" href="https://t.me/fh_harizma_bot" target="_blank" rel="noopener" data-book data-i18n="cta.room">Забронировать зал</a>
+    </aside>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <a class="logo" href="#top" aria-label="KARIZMA"><img src="img/logo.png" alt="KARIZMA"></a>
+
+  <div class="footer__items">
+    <a class="pill" href="tel:+380979709090">
+      <span class="pill__icon"><svg viewBox="0 0 24 24"><path d="M7 2h10a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm1 3v12h8V5H8z"/></svg></span>
+      <span>+38 (097) 970-90-90</span>
+    </a>
+    <span class="pill">
+      <span class="pill__icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm1 4v5l3.500 2-.8 1.300L11 13V7h2z"/></svg></span>
+      <span data-i18n="footer.hours">Пн – Вс круглосуточно</span>
+    </span>
+    <span class="pill">
+      <span class="pill__icon"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.500A2.500 2.500 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5z"/></svg></span>
+      <span data-i18n="footer.addr">м. Лубянка, ул. Сретенский переулок, 4</span>
+    </span>
+  </div>
+
+  <div class="lang" role="group" data-i18n-aria="lang.aria" aria-label="Язык сайта">
+      <button type="button" data-setlang="ru">RU</button><button type="button" data-setlang="kk">KZ</button><button type="button" data-setlang="en">EN</button>
+    </div>
+
+  <a class="btn btn--outline" href="https://yandex.ru/maps/?text=Сретенский%20переулок%204%20Москва" target="_blank" rel="noopener" data-i18n="footer.route">Построить маршрут</a>
+
+  <div class="footer__m-btns">
+    <a class="btn btn--outline" href="#halls" data-i18n="nav.halls">Наши залы</a>
+    <a class="btn btn--white" href="#booking" data-book data-i18n="nav.book">Забронировать</a>
+  </div>
+
+  <span class="footer__up-label" data-i18n="footer.up">Подняться вверх</span>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Подняться вверх" data-i18n-aria="footer.up">
+  <svg viewBox="0 0 24 24"><path d="M5 15l7-7 7 7"/></svg>
+</button>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
